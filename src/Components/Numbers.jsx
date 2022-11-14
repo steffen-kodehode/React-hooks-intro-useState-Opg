@@ -6,8 +6,8 @@ function NumberCounter() {
   return (
     <>
       <h1>{count}</h1>
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <button onClick={() => setCount(count - 1)}>Reduce by 1</button>
+      <button onClick={() => setCount(count + 1)}>Increase by 1</button>
     </>
   );
 }
