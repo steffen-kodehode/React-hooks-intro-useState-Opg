@@ -8,7 +8,7 @@ async function fetchAPI(callback) {
   callback(data);
 }
 
-const PokeImg = (props) => {
+const PokeName = (props) => {
   const { data } = props;
 
   const [fetchedAPI, setFetchedAPI] = useState(null);
@@ -26,4 +26,4 @@ const PokeImg = (props) => {
   );
 };
 
-export default PokeImg;
+export default PokeName;

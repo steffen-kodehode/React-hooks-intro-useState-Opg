@@ -1,7 +1,7 @@
 import "./App.css";
 import NumberCounter from "./Components/Numbers";
 import { useState } from "react";
-import PokeImg from "./Components/FetchApiName";
+import PokeName from "./Components/FetchApiName";
 
 function App() {
   const [state, setstate] = useState(null);
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <NumberCounter />
       <div>
-        <PokeImg />
+        <PokeName />
       </div>
     </div>
   );
