@@ -10,7 +10,6 @@ async function fetchAPI(callback) {
 
 const PokeName = (props) => {
   const { data } = props;
-
   const [fetchedAPI, setFetchedAPI] = useState(null);
 
   useEffect(() => {
@@ -19,6 +18,7 @@ const PokeName = (props) => {
     fetchAPI(setFetchedAPI);
     console.log(fetchedAPI);
   }, []);
+
   return (
     <div>
       <h3>{fetchedAPI && fetchedAPI.results[0].name}</h3>
