@@ -1,8 +1,7 @@
 import "./App.css";
 import NumberCounter from "./Components/Numbers";
 import { useState, useEffect } from "react";
-import PokeInfo from "./Components/FetchAPIInfo";
-import ExtraPokeInfo from "./Components/ExtraAPIInfo";
+import ExtraPokeInfo from "./Components/PokeAPIInfo";
 import InfoContext from "./context/MyContext";
 
 function App() {
@@ -32,12 +31,10 @@ function App() {
   return (
     <div className="App">
       <NumberCounter />
-      <div>
-        <PokeInfo />
-      </div>
       <>
         <InfoContext.Provider value={state}>
           <ExtraPokeInfo />
+
           <button id="pokeBTNprev" onClick={() => PrevBtnCond()}>
             Prev
           </button>

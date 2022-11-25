@@ -8,6 +8,11 @@ const ExtraPokeInfo = () => {
   return (
     <>
       <div>
+        <h3 id="PokeName">{PokeInfoEx && PokeInfoEx.id}</h3>
+        <h3 id="PokeName">{PokeInfoEx && PokeInfoEx.name}</h3>
+      </div>
+
+      <div>
         {PokeInfoEx && PokeInfoEx.sprites.front_default && (
           <img
             src={PokeInfoEx && PokeInfoEx.sprites.front_default}
