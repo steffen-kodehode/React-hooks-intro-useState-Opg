@@ -1,5 +1,4 @@
-import { useState, useEffect, useContext } from "react";
-import Context from "../context/MyContext";
+import { useState, useEffect } from "react";
 
 // https://pokeapi.co/api/v2/pokemon
 
@@ -7,7 +6,7 @@ import Context from "../context/MyContext";
 
 const PokeInfo = () => {
   const [fetchedAPI, setFetchedAPI] = useState(null);
-  const [pokemonNMB, setPokemonNMB] = useState(1);
+  const [pokemonNMB] = useState(1);
 
   useEffect(() => {
     async function fetchAPI() {
@@ -22,31 +21,10 @@ const PokeInfo = () => {
     fetchAPI();
   }, [pokemonNMB]);
 
-  const PrevBtnCond = () => {
-    if (pokemonNMB > 1) {
-      setPokemonNMB((oldNMB) => oldNMB - 1);
-    } else setPokemonNMB(1);
-  };
-
   return (
     <div>
       <h3 id="PokeName">{fetchedAPI && fetchedAPI.id}</h3>
       <h3 id="PokeName">{fetchedAPI && fetchedAPI.name}</h3>
-      <img
-        src={fetchedAPI && fetchedAPI.sprites.front_default}
-        alt={fetchedAPI && fetchedAPI.name}
-      />
-      <div>
-        <button id="pokeBTNprev" onClick={() => PrevBtnCond()}>
-          Prev
-        </button>
-        <button
-          id="pokeBTNnext"
-          onClick={() => setPokemonNMB((oldNMB) => oldNMB + 1)}
-        >
-          Next
-        </button>
-      </div>
     </div>
   );
 };
